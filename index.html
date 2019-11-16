@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" class="slds-theme_default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Web Site</title>
+    <link href="/public/assets/styles/salesforce-lightning-design-system.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    
+    <div class="slds-theme_inverse slds-grid slds-p-around_medium slds-text-heading_medium">
+        <span>My Web Site</span>
+    </div>
+    <div class="slds-container_small slds-container_center">
+        <div class="slds-card">
+            <div class="slds-card__body slds-card__body_inner ">
+                <form class="slds-form slds-grid slds-wrap" action="/login" method="post">
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <label class="slds-form-element__label" for="userName">Username</label>
+                        <div class="slds-form_element__control">
+                            <input type="text" id="userName" name="userName" class="slds-input"/>
+                        </div>
+                    </div>
+                    <div class="slds-form-element slds-size_1-of-1">
+                        <label class="slds-form-element__label" for="password">Password</label>
+                        <div class="slds-form_element__control">
+                            <input type="password" id="password" name="password" class="slds-input"/>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-size_1-of-1 slds-m-top_small">
+                        <button type="submit" class="slds-button slds-button_brand slds-col_bump-left">
+                            Login
+                        </button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
