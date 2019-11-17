@@ -26,14 +26,14 @@ const registerUser = (user) => {
     if(alreadyExist){
         return {
             message:`User already exist with user name: ${user.userName} or email ${user.email}`,
-            success:false
+            success:'error'
         };
     }
 
     users = [...users, user];
     return {
         message:`User registered succesfully`,
-        success:true
+        success:'success'
     };
 }
 

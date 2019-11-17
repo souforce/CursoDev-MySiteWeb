@@ -31,12 +31,15 @@ app.post('/login', (req, res)=>{
 });
 
 app.post('/signUp', (req, res) =>{
-    const result = registerUser(req.body.newUser);
+    const newUser = {name:req.body.name, email:req.body.email, userName:req.body.userName, password:req.body.password };
+    const result = registerUser(newUser);
+
     if(req.xhr){
-        res.json(res);
-        res.end();
+        res.status(200)
+           .type('json')
+           .send(result);
     }else{
-        res.render(indexPath,res);
+        res.render(indexPath,{result:result});
     }
 });
 
