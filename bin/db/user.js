@@ -9,6 +9,10 @@ let users = [
     }
 ]
 
+const getUserBySessionId = (sessionId) =>{
+    return users.find(user => user.sessionId === sessionId);
+}
+
 const authenticateUser = (userName, password) => {
     const currentUser = users.find( user => user.userName === userName && user.password === password);
     
@@ -40,3 +44,4 @@ const registerUser = (user) => {
 
 exports.authenticateUser = authenticateUser;
 exports.registerUser = registerUser;
+exports.getUserBySessionId = getUserBySessionId;
